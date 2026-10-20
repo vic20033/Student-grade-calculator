@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Student Grade Calculator</h1>
 
+    <form id="studentForm">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" required>
+
+        <h3>Enter Scores (0–100)</h3>
+
+        <label for="subject1">Mathematics:</label>
+        <input type="number" id="subject1" min="0" max="100" required>
+
+        <label for="subject2">English:</label>
+        <input type="number" id="subject2" min="0" max="100" required>
+
+        <label for="subject3">Computer Science:</label>
+        <input type="number" id="subject3" min="0" max="100" required>
+
+        <label for="subject4">Physics:</label>
+        <input type="number" id="subject4" min="0" max="100" required>
+
+        <label for="subject5">Chemistry:</label>
+        <input type="number" id="subject5" min="0" max="100" required>
+
+        <button type="submit">Calculate Result</button>
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Student Results</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mathematics</th>
+                    <th>English</th>
+                    <th>Computer Science</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>Total</th>
+                    <th>Average</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="resultTable"></tbody>
+        </table>
+    </div>
+
+    <div class="summary">
+        <h3>Class Summary</h3>
+        <p id="highestStudent">Highest-Scoring Student: Not available</p>
+        <p id="lowestSubject">Lowest Class Average: Not available</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
